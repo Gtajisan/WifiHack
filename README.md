@@ -84,7 +84,7 @@ Launch online WPS bruteforce with the specified first half of the PIN:
 # Acknowledgements
 ## Special Than all root users 
 * FARHAN X ME
-## [Facebook]((https://www.facebook.com/profile.php?id=100094924471568&mibextid=ZbWKwL)
+## [Facebook](https://www.facebook.com/profile.php?id=100094924471568&mibextid=ZbWKwL)
 
 ## [Whatsapp](https://wa.me/+880130505723*)
 
