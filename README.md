@@ -15,7 +15,7 @@ Please note that root access is required.
  ```
 ### Getting WifiHack
  ```
- git clone --depth 1 https://github.com/Gtajisan/WifiHack
+ git clone --depth 1 https://github.com/Gtajisan/WifiHack.git
  ```
  ```
  cd WifiHack
@@ -91,3 +91,4 @@ Launch online WPS bruteforce with the specified first half of the PIN:
 ## Thanks For Using This Tool 🐸🙄
 ## ki obsta 🤡
 ## cd WifiHack sudo python WifiHack/farhan.py -i wlan0 -K
+## আমি ফারহান 🙁
