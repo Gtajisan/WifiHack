@@ -1,6 +1,6 @@
 
 ### Hack WIfi Using Termux! (Requires Root)
-<p align="center"><img src="https://i.ibb.co/ygb9X0K/Screenshot-2023-04-13-12-18-19-365-com-termux.jpg"></p>
+<p align="center"><img src="https://photos.google.com/direct/AF1QipMMGsQAanBXc0PKddjw6Y9OP_krGW0e5A0zSJeoNcvk8dtgvU3LzHXFZBWIFrdTvw/photo/AF1QipNvbJewZyBnwE8m2gVmH3s-cS0Q-dd0Gb9vmjCa
 
 ## [Termux](https://termux.com/)
 Please note that root access is required.  
