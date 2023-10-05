@@ -30,6 +30,7 @@ apt update && apt upgrade && pkg install -y root-repo && pkg install -y git tsu 
 8)Crack Handshake without monitor mod support 
 ```
 
+
 ## Tested On :
 
 * Kali Linux (🚫)
@@ -38,11 +39,11 @@ apt update && apt upgrade && pkg install -y root-repo && pkg install -y git tsu 
 * Kali Nethunter (🚫)
 * Termux ( Rooted Devices✅)
 * Parrot OS (🚫)
-* আজ পারিনা বলে (🐸)
+* তুমি আছো তুমি নাই (🤣)
 
 
 ### Hack WIfi Using Termux! (Requires Root)
-![image](https://github.com/Gtajisan/WifiHack/assets/124022055/4a7add22-11b7-4443-a44c-6794431589b2)
+![image](https://github.com/Gtajisan/WifiHackfarhan/assets/124022055/4a7add22-11b7-4443-a44c-6794431589b2)
 
 ## [Termux](https://termux.com/)
 Please note that root access is required.  
@@ -60,7 +61,6 @@ Please note that root access is required.
 git clone --depth 1 https://github.com/Gtajisan/WifiHack
  ```
  ```
-
 ### One line Command
  ```
  sudo python WifiHack/farhan.py -i wlan0 --iface-down -K
@@ -96,19 +96,19 @@ git clone --depth 1 https://github.com/Gtajisan/WifiHack
 ## Usage examples
 Start Pixie Dust attack on a specified BSSID:
  ```
- sudo python3 WifiHack -i wlan0 -b 00:90:4C:C1:AC:21 -K
+ sudo python3 farhan.py -i wlan0 -b 00:90:4C:C1:AC:21 -K
  ```
 Show avaliable networks and start Pixie Dust attack on a specified network:
  ```
- sudo python3 WifiHack -i wlan0 -K
+ sudo python3 farhan.py -i wlan0 -K
  ```
 Launch online WPS bruteforce with the specified first half of the PIN:
  ```
- sudo python3 WifiHack -i wlan0 -b 00:90:4C:C1:AC:21 -B -p 1234
+ sudo python3 farhan.py -i wlan0 -b 00:90:4C:C1:AC:21 -B -p 1234
  ```
  Start WPS push button connection:s
  ```
- sudo python3 WifiHack -i wlan0 --pbc
+ sudo python3 farhan.py -i wlan0 --pbc
  ```
 ## Troubleshooting
 #### "RTNETLINK answers: Operation not possible due to RF-kill"
@@ -118,15 +118,3 @@ Launch online WPS bruteforce with the specified first half of the PIN:
  Try disabling Wi-Fi in the system settings and kill the Network manager. Alternatively, you can try running OneShot with ```--iface-down``` argument.
 #### The wlan0 interface disappears when Wi-Fi is disabled on Android devices with MediaTek SoC
  Try running WifiHack with the `--mtk-wifi` flag to initialize Wi-Fi device driver.
-# Acknowledgements
-## Special Than all root users 
-* FARHAN X ME
-## [Facebook](https://www.facebook.com/profile.php?id=100094924471568&mibextid=ZbWKwL)
-
-## [Whatsapp](https://wa.me/+880130505723*)
-
-## Thanks For Using This Tool 🐸🙄
-## ki obsta 🤡
-## cd WifiHack
-## sudo python WifiHack/WifiHack -i wlan0 -K
-
