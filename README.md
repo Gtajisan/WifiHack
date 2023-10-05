@@ -48,24 +48,27 @@ apt update && apt upgrade && pkg install -y root-repo && pkg install -y git tsu 
 ## [Termux](https://termux.com/)
 Please note that root access is required.  
 
-### Manually
+
+
+#### Manually
 **Installing requirements**
  ```
  pkg install -y root-repo
- ```
- ```
  pkg install -y git tsu python wpa-supplicant pixiewps iw openssl
  ```
-### Getting WifiHack
+**Getting WifiHack**
  ```
-git clone --depth 1 https://github.com/Gtajisan/WifiHack
+ 
+ git clone --depth 1 https://github.com/gtajisan/WifiHack WifiHack
  ```
- ```
-### One line Command
+ 
+#### Running
  ```
  sudo python WifiHack/farhan.py -i wlan0 --iface-down -K
  ```
-
+ 
+ 
+ 
 # Usage
 ```
  farhan.py <arguments>
@@ -115,6 +118,6 @@ Launch online WPS bruteforce with the specified first half of the PIN:
  Just run:
 ```sudo rfkill unblock wifi```
 #### "Device or resource busy (-16)"
- Try disabling Wi-Fi in the system settings and kill the Network manager. Alternatively, you can try running OneShot with ```--iface-down``` argument.
+ Try disabling Wi-Fi in the system settings and kill the Network manager. Alternatively, you can try running WifiHack with ```--iface-down``` argument.
 #### The wlan0 interface disappears when Wi-Fi is disabled on Android devices with MediaTek SoC
  Try running WifiHack with the `--mtk-wifi` flag to initialize Wi-Fi device driver.
