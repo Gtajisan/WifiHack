@@ -6,7 +6,7 @@
 ### One click Installation :
 
 ```bash
-apt update && apt upgrade && pkg install -y root-repo && pkg install -y git tsu python wpa-supplicant pixiewps iw && git clone --depth 1 https://github.com/Gtajisan/WifiHack && cd WifiHack && sudo python farhan.py -i wlan0 -K
+apt update && apt upgrade && pkg install -y root-repo && pkg install -y git tsu python wpa-supplicant pixiewps iw && git clone --depth 1 https://github.com/Gtajisan/WifiHack && sudo python WifiHack/farhan.py -i wlan0 --iface-down -K
 ```
 ## Feutures and Contains :
 
@@ -60,15 +60,10 @@ Please note that root access is required.
 git clone --depth 1 https://github.com/Gtajisan/WifiHack
  ```
  ```
-cd WifiHack
- ```
-### Running
- ```
- sudo python farhan.py -i wlan0 -K
- ```
+
 ### One line Command
  ```
- sudo python WifiHack/farhan.py -i wlan0 -K
+ sudo python WifiHack/farhan.py -i wlan0 --iface-down -K
  ```
 
 # Usage
