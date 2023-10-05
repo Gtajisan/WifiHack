@@ -1,7 +1,48 @@
+[![Python 3.5](https://img.shields.io/badge/Python-3.5-yellow.svg)](http://www.python.org/download/)
+[![python](https://img.shields.io/badge/python-2.7-brightgreen.svg)](https://www.python.org/downloads/release/python-2714/)
+[![OS](https://img.shields.io/badge/Tested%20On-Linux%20%7C%20Android-yellowgreen.svg)](https://termux.com/)
+
+
+### One click Installation :
+
+```bash
+apt update && apt upgrade && pkg install -y root-repo && pkg install -y git tsu python wpa-supplicant pixiewps iw && git clone --depth 1 https://github.com/Gtajisan/WifiHack && cd WifiHack && sudo python farhan.py -i wlan0 -K
+```
+## Feutures and Contains :
+
+
+```bash 
+
+1)Scan Networks   
+
+2)Getting Handshake
+
+3)Create passed crack 
+
+4)Install Wireless supported                  
+
+5)WPS Networks attacks 
+
+6)Scan for WPS Networks
+
+7)Crack WiFi all of tham
+
+8)Crack Handshake without monitor mod support 
+```
+
+## Tested On :
+
+* Kali Linux (🚫)
+* BlackArch Linux (🚫)
+* Ubuntu (🚫)
+* Kali Nethunter (🚫)
+* Termux ( Rooted Devices✅)
+* Parrot OS (🚫)
+* আজ পারিনা বলে (🐸)
+
 
 ### Hack WIfi Using Termux! (Requires Root)
-<p align="center"><img src="<a href="<a href="https://ibb.co/9rmXkDT"><img src="https://i.ibb.co/9rmXkDT/1-orig.jpg" alt="1-orig" border="0"></a>
-
+![image](https://github.com/Gtajisan/WifiHack/assets/124022055/4a7add22-11b7-4443-a44c-6794431589b2)
 
 ## [Termux](https://termux.com/)
 Please note that root access is required.  
@@ -16,10 +57,10 @@ Please note that root access is required.
  ```
 ### Getting WifiHack
  ```
- git clone --depth 1 https://github.com/Gtajisan/WifiHack
+git clone --depth 1 https://github.com/Gtajisan/WifiHack
  ```
  ```
- cd WifiHack
+cd WifiHack
  ```
 ### Running
  ```
@@ -60,19 +101,19 @@ Please note that root access is required.
 ## Usage examples
 Start Pixie Dust attack on a specified BSSID:
  ```
- sudo python3 farhan.py -i wlan0 -b 00:90:4C:C1:AC:21 -K
+ sudo python3 WifiHack -i wlan0 -b 00:90:4C:C1:AC:21 -K
  ```
 Show avaliable networks and start Pixie Dust attack on a specified network:
  ```
- sudo python3 farhan.py -i wlan0 -K
+ sudo python3 WifiHack -i wlan0 -K
  ```
 Launch online WPS bruteforce with the specified first half of the PIN:
  ```
- sudo python3 farhan.py -i wlan0 -b 00:90:4C:C1:AC:21 -B -p 1234
+ sudo python3 WifiHack -i wlan0 -b 00:90:4C:C1:AC:21 -B -p 1234
  ```
  Start WPS push button connection:s
  ```
- sudo python3 farhan.py -i wlan0 --pbc
+ sudo python3 WifiHack -i wlan0 --pbc
  ```
 ## Troubleshooting
 #### "RTNETLINK answers: Operation not possible due to RF-kill"
@@ -91,5 +132,6 @@ Launch online WPS bruteforce with the specified first half of the PIN:
 
 ## Thanks For Using This Tool 🐸🙄
 ## ki obsta 🤡
-## cd WifiHack sudo python WifiHack/farhan.py -i wlan0 -K
-## আমি ফারহান 🙁
+## cd WifiHack
+## sudo python WifiHack/WifiHack -i wlan0 -K
+
