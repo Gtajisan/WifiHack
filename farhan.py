@@ -32,7 +32,7 @@ print("""\033[1;33m
  \033[1;37mGithub  :            gtajisan
  \033[1;37mWhatsapp:            +880130505723*
  \033[1;31mOne line Command:
-\033[1;31msudo python FARHAN-Shot2/FARHAN-Shot2.py -i wlan0 --iface-down -K
+\033[1;31msudo python WifiHack/farhan.py -i wlan0 --iface-down -K
 
  \033[1;31mFor Help : FB-AND-ETC
 
@@ -444,8 +444,8 @@ class Companion:
         self.connection_status = ConnectionStatus()
 
         user_home = str(pathlib.Path.home())
-        self.sessions_dir = f'{user_home}/.FARHAN-Shot2/sessions/'
-        self.pixiewps_dir = f'{user_home}/.FARHAN-Shot2/pixiewps/'
+        self.sessions_dir = f'{user_home}/.farhan/sessions/'
+        self.pixiewps_dir = f'{user_home}/.farhan/pixiewps/'
         self.reports_dir = os.path.dirname(os.path.realpath(__file__)) + '/reports/'
         if not os.path.exists(self.sessions_dir):
             os.makedirs(self.sessions_dir)
@@ -1074,7 +1074,7 @@ def die(msg):
 
 def usage():
     return """
-FARHAN-Shot2Pin 0.0.2 (c) 2017 rofl0r, modded by drygdryg
+farhanPin 0.0.2 (c) 2017 rofl0r, modded by farhan
 
 %(prog)s <arguments>
 
@@ -1110,7 +1110,7 @@ if __name__ == '__main__':
     import argparse
 
     parser = argparse.ArgumentParser(
-        description='FARHAN-Shot2Pin 0.0.2 (c) 2017 rofl0r, modded by drygdryg',
+        description='farhanPin 0.0.2 (c) 2017 rofl0r, modded by farhan',
         epilog='Example: %(prog)s -i wlan0 -b 00:90:4C:C1:AC:21 -K'
         )
 
