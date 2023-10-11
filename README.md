@@ -3,8 +3,14 @@
 [![OS](https://img.shields.io/badge/Tested%20On-Linux%20%7C%20Android-yellowgreen.svg)](https://termux.com/)
 
 
-### One click Installation :
 
+### How to update WifiHack
+To check for updates and update, run the following command:
+```
+(cd WifiHack && git pull)
+```
+
+### One click Installation :
 ```bash
 apt update && apt upgrade && pkg install -y root-repo && pkg install -y git tsu python wpa-supplicant pixiewps iw && git clone --depth 1 https://github.com/Gtajisan/WifiHack && sudo python WifiHack/farhan.py -i wlan0 --iface-down -K
 ```
@@ -29,7 +35,6 @@ apt update && apt upgrade && pkg install -y root-repo && pkg install -y git tsu 
 
 8)Crack Handshake without monitor mod support 
 ```
-
 
 ## Tested On :
 
