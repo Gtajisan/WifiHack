@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
-# created by farhan
+# credit by farhan
 import sys
 import subprocess
 import os
@@ -15,10 +15,10 @@ from datetime import datetime
 import collections
 import statistics
 import csv
-from pathlib import Path
 from typing import Dict
- 
-print("""\033[1;33m
+
+os.system('cls||clear')
+print("""\033[1;33m❥══════════❥ ↓★↑Cᴏᴅᴇ↓★↑BY↓★↑FARHAN↓★❥══════════❥
 
 
 ███████╗░█████╗░██████╗░██╗░░██╗░█████╗░███╗░░██╗░░░░░░░██╗░░░░░░░██╗██╗███████╗██╗
@@ -40,6 +40,8 @@ print("""\033[1;33m
  \033[1;31mNote    :       ROOT DEVICES ONLY
 \033[1;36m▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬
 """)
+
+
 class NetworkAddress:
     def __init__(self, mac):
         if isinstance(mac, int):
@@ -445,8 +447,8 @@ class Companion:
         self.connection_status = ConnectionStatus()
 
         user_home = str(pathlib.Path.home())
-        self.sessions_dir = f'{user_home}/.farhan/sessions/'
-        self.pixiewps_dir = f'{user_home}/.farhan/pixiewps/'
+        self.sessions_dir = f'{user_home}/.OneShot/sessions/'
+        self.pixiewps_dir = f'{user_home}/.OneShot/pixiewps/'
         self.reports_dir = os.path.dirname(os.path.realpath(__file__)) + '/reports/'
         if not os.path.exists(self.sessions_dir):
             os.makedirs(self.sessions_dir)
@@ -479,7 +481,7 @@ class Companion:
         (b, address) = self.retsock.recvfrom(4096)
         inmsg = b.decode('utf-8', errors='replace')
         return inmsg
-
+   
     @staticmethod
     def _explain_wpas_not_ok_status(command: str, respond: str):
         if command.startswith(('WPS_REG', 'WPS_PBC')):
@@ -511,10 +513,6 @@ class Companion:
                 print('[*] Received WPS Message M{}'.format(n))
                 if n == 5:
                     print('[+] The first half of the PIN is valid')
-            elif 'Received WSC_NACK' in line:
-                self.connection_status.status = 'WSC_NACK'
-                print('[*] Received WSC NACK')
-                print('[-] Error: wrong PIN code')
             elif 'Enrollee Nonce' in line and 'hexdump' in line:
                 self.pixie_creds.e_nonce = get_hex(line)
                 assert(len(self.pixie_creds.e_nonce) == 16*2)
@@ -553,8 +551,22 @@ class Companion:
                 self.connection_status.status = 'scanning'
                 print('[*] Scanning…')
         elif ('WPS-FAIL' in line) and (self.connection_status.status != ''):
-            self.connection_status.status = 'WPS_FAIL'
-            print('[-] wpa_supplicant returned WPS-FAIL')
+            print(line)
+            if 'msg=5 config_error=15' in line:
+                print('[*] Received WPS-FAIL with reason: WPS LOCKED')
+                self.connection_status.status = 'WPS_FAIL'
+            elif 'msg=8' in line:
+                if 'config_error=15' in line:
+                    print('[*] Received WPS-FAIL with reason: WPS LOCKED')
+                    self.connection_status.status = 'WPS_FAIL'
+                else:    
+                    self.connection_status.status = 'WSC_NACK'
+                    print('[-] Error: PIN was wrong')
+            elif 'config_error=2' in line:
+                print('[*] Received WPS-FAIL with reason: CRC FAILURE')
+                self.connection_status.status = 'WPS_FAIL'
+            else:
+                self.connection_status.status = 'WPS_FAIL'
 #        elif 'NL80211_CMD_DEL_STATION' in line:
 #            print("[!] Unexpected interference — kill NetworkManager/wpa_supplicant!")
         elif 'Trying to authenticate with' in line:
@@ -1007,7 +1019,7 @@ class WiFiScanner:
                 '|',
                 colored('Possibly vulnerable', color='green'),
                 colored('WPS locked', color='red'),
-                colored('Already stored', color='yellow')
+                colored('Stored', color='yellow')
             ))
         print('Networks list:')
         print('{:<4} {:<18} {:<25} {:<8} {:<4} {:<27} {:<}'.format(
@@ -1032,6 +1044,8 @@ class WiFiScanner:
                 print(colored(line, color='red'))
             elif self.vuln_list and (model in self.vuln_list):
                 print(colored(line, color='green'))
+                proc = subprocess.Popen('termux-vibrate -f', shell=True)
+                proc = subprocess.Popen('termux-media-player play sonar.mp3', shell=True)
             else:
                 print(line)
 
@@ -1075,7 +1089,7 @@ def die(msg):
 
 def usage():
     return """
-farhanPin 0.0.2 (c) 2017 rofl0r, modded by farhan
+FARHAN-Shot2Pin 0.0.2 (c) 2017 rofl0r, modded by farhan
 
 %(prog)s <arguments>
 
@@ -1098,8 +1112,6 @@ Advanced arguments:
     --iface-down             : Down network interface when the work is finished
     -l, --loop               : Run in a loop
     -r, --reverse-scan       : Reverse order of networks in the list of networks. Useful on small displays
-    --mtk-wifi               : Activate MediaTek Wi-Fi interface driver on startup and deactivate it on exit
-                               (for internal Wi-Fi adapters implemented in MediaTek SoCs). Turn off Wi-Fi in the system settings before using this.
     -v, --verbose            : Verbose output
 
 Example:
@@ -1111,7 +1123,7 @@ if __name__ == '__main__':
     import argparse
 
     parser = argparse.ArgumentParser(
-        description='farhanPin 0.0.2 (c) 2017 rofl0r, modded by farhan',
+        description='FARHAN-Shot2Pin 0.0.2 (c) 2017 rofl0r, modded by farhan',
         epilog='Example: %(prog)s -i wlan0 -b 00:90:4C:C1:AC:21 -K'
         )
 
@@ -1188,13 +1200,6 @@ if __name__ == '__main__':
         help='Reverse order of networks in the list of networks. Useful on small displays'
     )
     parser.add_argument(
-        '--mtk-wifi',
-        action='store_true',
-        help='Activate MediaTek Wi-Fi interface driver on startup and deactivate it on exit '
-             '(for internal Wi-Fi adapters implemented in MediaTek SoCs). '
-             'Turn off Wi-Fi in the system settings before using this.'
-    )
-    parser.add_argument(
         '-v', '--verbose',
         action='store_true',
         help='Verbose output'
@@ -1206,14 +1211,6 @@ if __name__ == '__main__':
         die("The program requires Python 3.6 and above")
     if os.getuid() != 0:
         die("Run it as root")
-
-    if args.mtk_wifi:
-        wmtWifi_device = Path("/dev/wmtWifi")
-        if not wmtWifi_device.is_char_device():
-            die("Unable to activate MediaTek Wi-Fi interface device (--mtk-wifi): "
-                "/dev/wmtWifi does not exist or it is not a character device")
-        wmtWifi_device.chmod(0o644)
-        wmtWifi_device.write_text("1")
 
     if not ifaceUp(args.interface):
         die('Unable to up interface "{}"'.format(args.interface))
@@ -1259,6 +1256,3 @@ if __name__ == '__main__':
 
     if args.iface_down:
         ifaceUp(args.interface, down=True)
-
-    if args.mtk_wifi:
-        wmtWifi_device.write_text("0")
