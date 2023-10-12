@@ -12,7 +12,7 @@ To check for updates and update, run the following command:
 
 ### One click Installation :
 ```bash
-apt update && apt upgrade && pkg install -y root-repo && pkg install -y git tsu python wpa-supplicant pixiewps iw && git clone --depth 1 https://github.com/Gtajisan/WifiHack && sudo python WifiHack/farhan.py -i wlan0 --iface-down -K
+apt update && apt upgrade && pkg install -y root-repo && pkg install -y git tsu python wpa-supplicant pixiewps iw && git clone --depth 1 https://github.com/Gtajisan/WifiHack && sudo python WifiHack/farhanX.py -i wlan0 --iface-down -K
 ```
 ## Feutures and Contains :
 
@@ -67,14 +67,14 @@ Please note that root access is required.
  
 #### Running
  ```
- sudo python WifiHack/farhan.py -i wlan0 --iface-down -K
+ sudo python WifiHack/farhanX.py -i wlan0 --iface-down -K
  ```
  
  
  
 # Usage
 ```
- farhan.py <arguments>
+ farhanX.py <arguments>
  Required arguments:
      -i, --interface=<wlan0>  : Name of the interface to use
 
