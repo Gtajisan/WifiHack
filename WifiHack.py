@@ -33,7 +33,7 @@ print("""\033[1;33m❥══════════❥ ↓★↑Cᴏᴅᴇ↓�
  \033[1;37mGithub  :            gtajisan X ME (🐸)
  \033[1;37mWhatsapp:            +880130505723*
  \033[1;31mOne line Command:
-\033[1;31msudo python WifiHack/farhan.py -i wlan0 --iface-down -K
+\033[1;31msudo sudo python WifiHack/WifiHack.py -i wlan0 -K
 
  \033[1;31mFor Help : FB-AND-TELEGRAM
 
