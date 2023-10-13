@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
-# credit by farhan
+# credit : yes im farhan 
 import sys
 import subprocess
 import os
@@ -16,7 +16,6 @@ import collections
 import statistics
 import csv
 from typing import Dict
-
 os.system('cls||clear')
 print("""\033[1;33m❥══════════❥ ↓★↑Cᴏᴅᴇ↓★↑BY↓★↑FARHAN↓★❥══════════❥
 
@@ -40,7 +39,6 @@ print("""\033[1;33m❥══════════❥ ↓★↑Cᴏᴅᴇ↓�
  \033[1;31mNote    :       ROOT DEVICES ONLY
 \033[1;36m▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬
 """)
-
 
 class NetworkAddress:
     def __init__(self, mac):
@@ -1089,7 +1087,7 @@ def die(msg):
 
 def usage():
     return """
-FARHAN-Shot2Pin 0.0.2 (c) 2017 rofl0r, modded by farhan
+WifiHackPin 0.0.2 (c) 2017 rofl0r, modded by farhan
 
 %(prog)s <arguments>
 
@@ -1123,7 +1121,7 @@ if __name__ == '__main__':
     import argparse
 
     parser = argparse.ArgumentParser(
-        description='FARHAN-Shot2Pin 0.0.2 (c) 2017 rofl0r, modded by farhan',
+        description='WifiHackPin 0.0.2 (c) 2017 rofl0r, modded by FARHAN',
         epilog='Example: %(prog)s -i wlan0 -b 00:90:4C:C1:AC:21 -K'
         )
 
