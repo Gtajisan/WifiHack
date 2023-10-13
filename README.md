@@ -129,5 +129,4 @@ Launch online WPS bruteforce with the specified first half of the PIN:
  Try running WifiHack with the `--mtk-wifi` flag to initialize Wi-Fi device driver.
 
 ### screenshot
-<p align="center"><img src="[https://user-images.githubusercontent.com/75953873/115979290-66309900-a55b-11eb-8259-4b125efc42bb.png](https://i.ibb.co/0GWdxHg/Photo-Lab-M-W-20231004-231206.jpg)https://i.ibb.co/0GWdxHg/Photo-Lab-M-W-20231004-231206.jpg"></p>
-
+<p align="center"><img src="[https://i.ibb.co/0GWdxHg/Photo-Lab-M-W-20231004-231206.jpg]
