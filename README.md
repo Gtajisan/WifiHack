@@ -66,8 +66,7 @@ Please note that root access is required.
  ```
 **Getting WifiHack**
  ```
- 
- git clone --depth 1 https://github.com/gtajisan/WifiHack WifiHack
+  git clone --depth 1 https://github.com/gtajisan/WifiHack WifiHack
  ```
  
 #### Running
