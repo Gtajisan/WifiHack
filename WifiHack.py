@@ -31,8 +31,7 @@ print("""\033[1;32m
  \033[1;37mGithub  :            gtajisan X me
  \033[1;37mWhatsapp:            +880130505723*
  \033[1;31mOne line Command:
-\033[1;31msudo python FARHAN-Shot2/FARHAN-Shot2.py -i wlan0 --iface-down -K
-
+\033[1;31msudo python WifiHack/WifiHack.py -i wlan0 -K
  \033[1;31mFor Help : FB-AND-TELEGRAM
 
  \033[1;31mNote    :       ROOT DEVICES ONLY
